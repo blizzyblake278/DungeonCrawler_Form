@@ -28,90 +28,95 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.lblName = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.dt_Picker = new System.Windows.Forms.DateTimePicker();
+            this.lblDTpicker = new System.Windows.Forms.Label();
+            this.btnContinue = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // lblEmail
             // 
-            this.label1.AutoSize = true;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Location = new System.Drawing.Point(154, 53);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "EMAIL: ";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblEmail.Location = new System.Drawing.Point(115, 50);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(47, 15);
+            this.lblEmail.TabIndex = 0;
+            this.lblEmail.Text = "EMAIL: ";
             // 
-            // textBox1
+            // txtEmail
             // 
-            this.textBox1.Location = new System.Drawing.Point(205, 50);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(354, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtEmail.Location = new System.Drawing.Point(180, 50);
+            this.txtEmail.Multiline = true;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(354, 20);
+            this.txtEmail.TabIndex = 1;
+            this.txtEmail.TextChanged += new System.EventHandler(this.TxtEmail_TextChanged);
             // 
-            // label2
+            // lblName
             // 
-            this.label2.AutoSize = true;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Location = new System.Drawing.Point(115, 130);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 15);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Character Name:";
+            this.lblName.AutoSize = true;
+            this.lblName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblName.Location = new System.Drawing.Point(73, 130);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(89, 15);
+            this.lblName.TabIndex = 2;
+            this.lblName.Text = "Character Name:";
             // 
-            // textBox2
+            // txtName
             // 
-            this.textBox2.Location = new System.Drawing.Point(205, 130);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(354, 20);
-            this.textBox2.TabIndex = 3;
+            this.txtName.Location = new System.Drawing.Point(180, 127);
+            this.txtName.Multiline = true;
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(354, 20);
+            this.txtName.TabIndex = 3;
+            this.txtName.TextChanged += new System.EventHandler(this.TxtName_TextChanged);
             // 
-            // dateTimePicker1
+            // dt_Picker
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(205, 189);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 4;
+            this.dt_Picker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dt_Picker.Location = new System.Drawing.Point(205, 189);
+            this.dt_Picker.Name = "dt_Picker";
+            this.dt_Picker.Size = new System.Drawing.Size(103, 20);
+            this.dt_Picker.TabIndex = 4;
             // 
-            // label3
+            // lblDTpicker
             // 
-            this.label3.AutoSize = true;
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label3.Location = new System.Drawing.Point(151, 189);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 15);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Birthday:";
+            this.lblDTpicker.AutoSize = true;
+            this.lblDTpicker.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblDTpicker.Location = new System.Drawing.Point(112, 189);
+            this.lblDTpicker.Name = "lblDTpicker";
+            this.lblDTpicker.Size = new System.Drawing.Size(50, 15);
+            this.lblDTpicker.TabIndex = 5;
+            this.lblDTpicker.Text = "Birthday:";
             // 
-            // button1
+            // btnContinue
             // 
-            this.button1.FlatAppearance.BorderSize = 3;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(318, 316);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.btnContinue.FlatAppearance.BorderSize = 3;
+            this.btnContinue.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnContinue.Location = new System.Drawing.Point(269, 267);
+            this.btnContinue.Name = "btnContinue";
+            this.btnContinue.Size = new System.Drawing.Size(75, 23);
+            this.btnContinue.TabIndex = 6;
+            this.btnContinue.Text = "CONTINUE";
+            this.btnContinue.UseVisualStyleBackColor = true;
+            this.btnContinue.Click += new System.EventHandler(this.Button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(624, 363);
+            this.Controls.Add(this.btnContinue);
+            this.Controls.Add(this.lblDTpicker);
+            this.Controls.Add(this.dt_Picker);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.lblEmail);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -121,13 +126,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.DateTimePicker dt_Picker;
+        private System.Windows.Forms.Label lblDTpicker;
+        private System.Windows.Forms.Button btnContinue;
     }
 }
 
