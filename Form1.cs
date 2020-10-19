@@ -20,7 +20,7 @@ namespace DungeonCrawler2
         //sets user input from txtEmail.Text to UserEmail
         public static string UserEmail { get; set; }
         public static string UserName { get; set; }
-       
+        public static DateTime UserBday { get; set; }  
      
         
         public Form1()
@@ -33,7 +33,7 @@ namespace DungeonCrawler2
             //email is here from user
             //txtEmail.Text is string of email entered
 
-            //MessageBox.Show(String.Format("Email: {0}\n UserName: {1}", UserEmail, UserName));
+            MessageBox.Show(String.Format("Email: {0}\n UserName: {1}\nUser's Birthday: {2}", UserEmail, UserName, UserBday));
             
 
         }
@@ -47,7 +47,17 @@ namespace DungeonCrawler2
 
         private void TxtName_TextChanged(object sender, EventArgs e)
         {
+            //sets users input as UserName and returns it to 
+            //auto prop of UserName
+            //thhis username will also be used as player's name in game
             UserName = this.txtName.Text;
+        }
+
+        private void Dt_Picker_ValueChanged(object sender, EventArgs e)
+        {
+            //UserBday = this.dt_Picker.Value.Date;
+            var dateTimeStr = this.dt_Picker.Value;
+            dateTimeStr.ToString("MM/dd/yyyy");
         }
     }
 }

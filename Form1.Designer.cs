@@ -79,9 +79,12 @@
             // 
             this.dt_Picker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dt_Picker.Location = new System.Drawing.Point(205, 189);
+            this.dt_Picker.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dt_Picker.Name = "dt_Picker";
             this.dt_Picker.Size = new System.Drawing.Size(103, 20);
             this.dt_Picker.TabIndex = 4;
+            this.dt_Picker.Value = new System.DateTime(2020, 10, 19, 0, 0, 0, 0);
+            this.dt_Picker.ValueChanged += new System.EventHandler(this.Dt_Picker_ValueChanged);
             // 
             // lblDTpicker
             // 
