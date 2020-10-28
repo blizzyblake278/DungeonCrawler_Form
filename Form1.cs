@@ -33,7 +33,7 @@ namespace DungeonCrawler2
             //email is here from user
             //txtEmail.Text is string of email entered
 
-            MessageBox.Show(String.Format("Email: {0}\n UserName: {1}\nUser's Birthday: {2}", UserEmail, UserName, UserBday));
+            //MessageBox.Show(String.Format("Email: {0}\n UserName: {1}\nUser's Birthday: {2}", UserEmail, UserName, UserBday));
             
 
         }

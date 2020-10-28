@@ -19,4 +19,31 @@ namespace DungeonCrawler2
             Application.Run(new Form1());
         }
     }
+    class Player
+    {
+        public string PlayerName { get; set; }
+        public int Health { get; set; }
+        public int Strength { get; set; }
+        
+        public Player (string playername, int health, int strength)
+        {
+            this.PlayerName = playername;
+            this.Health = health;
+            this.Strength = strength;
+        }
+
+        
+    }
+
+    class Weapon
+    {
+        public string Name { get; set; }
+        public int AtkDmg { get; set; }
+
+        public Weapon(string name, int attack)
+        {
+            this.Name = name;
+            this.AtkDmg = attack;
+        }
+    }
 }
