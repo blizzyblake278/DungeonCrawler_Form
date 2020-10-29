@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Console;
 
 namespace DungeonCrawler2
 {
     public partial class Intro : Form
     {
+        
         public Intro()
         {
             InitializeComponent();
@@ -20,7 +22,7 @@ namespace DungeonCrawler2
         private void ContinueButton_Click(object sender, EventArgs e)
         {
            //int counter = 0;
-            while(counter != 2)
+           if(counter != 3)
             {
                 if(counter == 0)
                 {
@@ -32,11 +34,14 @@ namespace DungeonCrawler2
                     TxtBox3.Visible = true;
                     counter++;
                 }
-                else
+                else if (counter == 2)
                 {
-                    MessageBox.Show("create form 3");
+                    Encounter1 encounter = new Encounter1();
+                    encounter.Show();
+                    Hide();
+
                 }
-               
+
             }
         }
 
