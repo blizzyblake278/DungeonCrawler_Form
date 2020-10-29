@@ -21,7 +21,7 @@ namespace DungeonCrawler2
     }
     public class Player
     {
-
+        private Form1 form1;
         private Weapon weapon;
         public string PlayerName { get; set; }
         public int Health { get; set; }
@@ -29,7 +29,8 @@ namespace DungeonCrawler2
         
         public Player (string playername, int health, int strength)
         {
-            this.PlayerName = playername;
+            form1.UserEmail = playername;  //gets character name from form1 and makes it the username throughout the game. 
+           // this.PlayerName = playername;
             this.Health = health;
             this.Strength = strength;
         }

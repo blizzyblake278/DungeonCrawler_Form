@@ -18,9 +18,9 @@ namespace DungeonCrawler2
     {
 
         //sets user input from txtEmail.Text to UserEmail
-        public static string UserEmail { get; set; }
-        public static string UserName { get; set; }
-        public static DateTime UserBday { get; set; }  
+        public string UserEmail { get; set; }
+        public string UserName { get; set; }
+        public DateTime UserBday { get; set; }  
      
         
         public Form1()

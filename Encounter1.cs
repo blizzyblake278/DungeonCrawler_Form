@@ -12,8 +12,8 @@ namespace DungeonCrawler2
 {
     public partial class Encounter1 : Form
     {
-        Player player;
-        Weapon weapon;
+        Player player;  //gets properties from player class
+        //Weapon weapon;
         public Encounter1()
         {
             InitializeComponent();
@@ -23,7 +23,13 @@ namespace DungeonCrawler2
         {
             if(GoblinHealth != 0)
             {
-                
+               GoblinHealth = GoblinHealth - player.Attack();
+               
+            }
+            else
+            {
+                //go to final scene/form
+                //Finalscene finalscene = new Finalscene();
             }
         }
     }
