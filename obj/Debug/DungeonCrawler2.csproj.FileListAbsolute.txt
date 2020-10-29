@@ -8,3 +8,4 @@ C:\Users\magic\source\repos\DungeonCrawler2\obj\Debug\DungeonCrawler2.csproj.Gen
 C:\Users\magic\source\repos\DungeonCrawler2\obj\Debug\DungeonCrawler2.csproj.CoreCompileInputs.cache
 C:\Users\magic\source\repos\DungeonCrawler2\obj\Debug\DungeonCrawler2.exe
 C:\Users\magic\source\repos\DungeonCrawler2\obj\Debug\DungeonCrawler2.pdb
+C:\Users\magic\source\repos\DungeonCrawler2\obj\Debug\DungeonCrawler2.Intro.resources

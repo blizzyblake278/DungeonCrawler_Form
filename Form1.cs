@@ -34,8 +34,10 @@ namespace DungeonCrawler2
             //txtEmail.Text is string of email entered
 
             //MessageBox.Show(String.Format("Email: {0}\n UserName: {1}\nUser's Birthday: {2}", UserEmail, UserName, UserBday));
-            
 
+            Intro intro = new Intro();
+            Hide();
+            intro.Show();
         }
 
         private void TxtEmail_TextChanged(object sender, EventArgs e)
