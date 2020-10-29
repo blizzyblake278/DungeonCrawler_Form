@@ -1,11 +1,9 @@
-C:\Users\magic\source\repos\DungeonCrawler2\bin\Debug\DungeonCrawler2.exe.config
 C:\Users\magic\source\repos\DungeonCrawler2\bin\Debug\DungeonCrawler2.exe
-C:\Users\magic\source\repos\DungeonCrawler2\bin\Debug\DungeonCrawler2.pdb
-C:\Users\magic\source\repos\DungeonCrawler2\obj\Debug\DungeonCrawler2.csprojAssemblyReference.cache
+C:\Users\magic\source\repos\DungeonCrawler2\bin\Debug\DungeonCrawler2.exe.config
 C:\Users\magic\source\repos\DungeonCrawler2\obj\Debug\DungeonCrawler2.Form1.resources
+C:\Users\magic\source\repos\DungeonCrawler2\obj\Debug\DungeonCrawler2.Intro.resources
 C:\Users\magic\source\repos\DungeonCrawler2\obj\Debug\DungeonCrawler2.Properties.Resources.resources
 C:\Users\magic\source\repos\DungeonCrawler2\obj\Debug\DungeonCrawler2.csproj.GenerateResource.cache
 C:\Users\magic\source\repos\DungeonCrawler2\obj\Debug\DungeonCrawler2.csproj.CoreCompileInputs.cache
 C:\Users\magic\source\repos\DungeonCrawler2\obj\Debug\DungeonCrawler2.exe
 C:\Users\magic\source\repos\DungeonCrawler2\obj\Debug\DungeonCrawler2.pdb
-C:\Users\magic\source\repos\DungeonCrawler2\obj\Debug\DungeonCrawler2.Intro.resources

@@ -61,5 +61,10 @@ namespace DungeonCrawler2
             var dateTimeStr = this.dt_Picker.Value;
             dateTimeStr.ToString("MM/dd/yyyy");
         }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

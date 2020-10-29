@@ -82,6 +82,7 @@
             this.Controls.Add(this.TxtBox1);
             this.Name = "Intro";
             this.Text = "Intro";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Intro_FormClosed);
             this.ResumeLayout(false);
 
         }

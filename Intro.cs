@@ -39,5 +39,10 @@ namespace DungeonCrawler2
                
             }
         }
+
+        private void Intro_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
