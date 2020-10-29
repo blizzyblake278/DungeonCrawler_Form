@@ -12,9 +12,19 @@ namespace DungeonCrawler2
 {
     public partial class Encounter1 : Form
     {
+        Player player;
+        Weapon weapon;
         public Encounter1()
         {
             InitializeComponent();
+        }
+        int GoblinHealth = 36;
+        private void AtkSword_Click(object sender, EventArgs e)
+        {
+            if(GoblinHealth != 0)
+            {
+                
+            }
         }
     }
 }

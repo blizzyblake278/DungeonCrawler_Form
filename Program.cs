@@ -19,8 +19,10 @@ namespace DungeonCrawler2
             Application.Run(new Form1());
         }
     }
-    class Player
+    public class Player
     {
+
+        private Weapon weapon;
         public string PlayerName { get; set; }
         public int Health { get; set; }
         public int Strength { get; set; }
@@ -31,11 +33,14 @@ namespace DungeonCrawler2
             this.Health = health;
             this.Strength = strength;
         }
-
         
+        public int Attack()
+        {
+            return weapon.Attack(this.Strength);
+        }
     }
 
-    class Weapon
+    public class Weapon
     {
         public string Name { get; set; }
         public int AtkDmg { get; set; }
@@ -44,6 +49,13 @@ namespace DungeonCrawler2
         {
             this.Name = name;
             this.AtkDmg = attack;
+        }
+
+        //Attack function that will take users STR and Sword Strength
+        public int Attack(int strength)
+        {
+            int result = strength + this.AtkDmg; // AtkDmg is the weapons Strength
+            return result;
         }
     }
 }

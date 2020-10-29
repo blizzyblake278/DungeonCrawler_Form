@@ -58,7 +58,7 @@
             this.TxtBox3.Name = "TxtBox3";
             this.TxtBox3.Size = new System.Drawing.Size(776, 109);
             this.TxtBox3.TabIndex = 2;
-            this.TxtBox3.Text = resources.GetString("TxtBox3.Text");
+            this.TxtBox3.Text = "*****";
             this.TxtBox3.Visible = false;
             // 
             // ContinueButton
