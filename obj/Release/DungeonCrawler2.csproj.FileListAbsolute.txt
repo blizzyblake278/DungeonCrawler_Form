@@ -9,3 +9,4 @@ C:\Users\magic\source\repos\DungeonCrawler2\obj\Release\DungeonCrawler2.csproj.G
 C:\Users\magic\source\repos\DungeonCrawler2\obj\Release\DungeonCrawler2.csproj.CoreCompileInputs.cache
 C:\Users\magic\source\repos\DungeonCrawler2\obj\Release\DungeonCrawler2.exe
 C:\Users\magic\source\repos\DungeonCrawler2\obj\Release\DungeonCrawler2.pdb
+C:\Users\magic\source\repos\DungeonCrawler2\obj\Release\DungeonCrawler2.Encounter1.resources

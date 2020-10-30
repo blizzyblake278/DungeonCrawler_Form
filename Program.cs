@@ -19,37 +19,39 @@ namespace DungeonCrawler2
             Application.Run(new Form1());
         }
     }
-    public class Player
+    public class Player 
     {
-        private Form1 form1;
-        private Weapon weapon;
+        private Form1 login;
+        private Weapon sword;
         public string PlayerName { get; set; }
-        public int Health { get; set; }
-        public int Strength { get; set; }
+        public int Health { get; set; } = 36;
+        public int Strength { get; set; } = 6;
         
-        public Player (string playername, int health, int strength)
+        public Player (string playername, int health, int strength, Weapon s)
         {
-            form1.UserEmail = playername;  //gets character name from form1 and makes it the username throughout the game. 
+            this.login.UserName = playername;  //gets character name from form1 and makes it the username throughout the game. 
            // this.PlayerName = playername;
             this.Health = health;
             this.Strength = strength;
+            this.sword = s;
         }
         
         public int Attack()
         {
-            return weapon.Attack(this.Strength);
+            return sword.Attack(this.Strength);
         }
     }
 
     public class Weapon
     {
-        public string Name { get; set; }
-        public int AtkDmg { get; set; }
+        public string Name { get; set; } = "Hel Fire";
+        public int AtkDmg { get; set; } = 4;
 
         public Weapon(string name, int attack)
         {
             this.Name = name;
             this.AtkDmg = attack;
+          
         }
 
         //Attack function that will take users STR and Sword Strength

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.SqlServer.Server;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,18 +14,30 @@ namespace DungeonCrawler2
     public partial class Encounter1 : Form
     {
         Player player;  //gets properties from player class
-        //Weapon weapon;
+
+        
+
+        //Weapon weapon; //gets properties from weapon class
         public Encounter1()
         {
             InitializeComponent();
         }
-        int GoblinHealth = 36;
+       
         private void AtkSword_Click(object sender, EventArgs e)
         {
-            if(GoblinHealth != 0)
+            
+            int GoblinHealth = 36;
+            int GoblinAttack = 2;
+            if (GoblinHealth != 0)
             {
-               GoblinHealth = GoblinHealth - player.Attack();
-               
+               GoblinHealth =- player.Attack();
+                player.Health =- GoblinAttack;
+
+                MessageBox.Show(String.Format("Goblin Health = {0}\n Player Health = {1}", GoblinHealth, player.Health));
+                //ResultsLabel.Visible = true;
+                
+                //below should display text and results from attack
+                //ResultsLabel.Text = Format.ToString("{0} Attacks the goblin. The goblin is at {1} HP. \n {2} is at {3} HP", player.PlayerName, GoblinHealth, player.PlayerName, player.Health);
             }
             else
             {

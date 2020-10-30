@@ -30,6 +30,7 @@
         {
             this.AtkSword = new System.Windows.Forms.Button();
             this.AtkFist = new System.Windows.Forms.Button();
+            this.ResultsLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // AtkSword
@@ -51,16 +52,28 @@
             this.AtkFist.Text = "Attack w/ Fists";
             this.AtkFist.UseVisualStyleBackColor = true;
             // 
+            // ResultsLabel
+            // 
+            this.ResultsLabel.AutoSize = true;
+            this.ResultsLabel.Location = new System.Drawing.Point(224, 101);
+            this.ResultsLabel.Name = "ResultsLabel";
+            this.ResultsLabel.Size = new System.Drawing.Size(35, 13);
+            this.ResultsLabel.TabIndex = 2;
+            this.ResultsLabel.Text = "label1";
+            this.ResultsLabel.Visible = false;
+            // 
             // Encounter1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ResultsLabel);
             this.Controls.Add(this.AtkFist);
             this.Controls.Add(this.AtkSword);
             this.Name = "Encounter1";
             this.Text = "Encounter1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -68,5 +81,6 @@
 
         private System.Windows.Forms.Button AtkSword;
         private System.Windows.Forms.Button AtkFist;
+        private System.Windows.Forms.Label ResultsLabel;
     }
 }
