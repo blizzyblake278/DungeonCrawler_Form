@@ -13,16 +13,17 @@ namespace DungeonCrawler2
 {
     public partial class Encounter1 : Form
     {
-        Player player;  //gets properties from player class
+        //Player player; //gets properties from player class
 
-        
+        public Player player1;
 
         //Weapon weapon; //gets properties from weapon class
         public Encounter1()
         {
             InitializeComponent();
+            
         }
-       
+        
         private void AtkSword_Click(object sender, EventArgs e)
         {
             
@@ -30,10 +31,10 @@ namespace DungeonCrawler2
             int GoblinAttack = 2;
             if (GoblinHealth != 0)
             {
-               GoblinHealth =- player.Attack();
-                player.Health =- GoblinAttack;
+               GoblinHealth -= player1.Attack();
+                player1.Health -= GoblinAttack;
 
-                MessageBox.Show(String.Format("Goblin Health = {0}\n Player Health = {1}", GoblinHealth, player.Health));
+                //MessageBox.Show(String.Format("Goblin Health = {0}\n Player Health = {1}", GoblinHealth, player1.Health));
                 //ResultsLabel.Visible = true;
                 
                 //below should display text and results from attack
@@ -41,6 +42,7 @@ namespace DungeonCrawler2
             }
             else
             {
+                MessageBox.Show("Error");
                 //go to final scene/form
                 //Finalscene finalscene = new Finalscene();
             }

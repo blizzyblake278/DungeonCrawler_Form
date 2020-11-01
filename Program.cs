@@ -19,27 +19,32 @@ namespace DungeonCrawler2
             Application.Run(new Form1());
         }
     }
-    public class Player 
+    public class Player
     {
-        private Form1 login;
+        private Form1 Login { get; set; }
+
+       
         private Weapon sword;
         public string PlayerName { get; set; }
         public int Health { get; set; } = 36;
         public int Strength { get; set; } = 6;
-        
-        public Player (string playername, int health, int strength, Weapon s)
+
+
+        public Player(string playername, int health, int strength, Weapon s)
         {
-            this.login.UserName = playername;  //gets character name from form1 and makes it the username throughout the game. 
-           // this.PlayerName = playername;
+            this.Login.UserName = playername;  //gets character name from form1 and makes it the username throughout the game. 
+                                               // this.PlayerName = playername;
             this.Health = health;
             this.Strength = strength;
             this.sword = s;
         }
-        
+
         public int Attack()
         {
             return sword.Attack(this.Strength);
         }
+
+
     }
 
     public class Weapon
@@ -51,7 +56,7 @@ namespace DungeonCrawler2
         {
             this.Name = name;
             this.AtkDmg = attack;
-          
+
         }
 
         //Attack function that will take users STR and Sword Strength
@@ -61,4 +66,6 @@ namespace DungeonCrawler2
             return result;
         }
     }
+    
+ 
 }
