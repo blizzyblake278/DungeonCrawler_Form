@@ -14,7 +14,8 @@ namespace DungeonCrawler2
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-       public static Player player;
+        public static Player player;
+        public static Enemy goblin;
 
         [STAThread]
 
@@ -22,34 +23,32 @@ namespace DungeonCrawler2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            
-            Weapon sword = new Weapon("Hel Fire", 6);
-            player = new Player("", 36, 6, sword);
 
+            Weapon sword = new Weapon("Hel Fire", 4);
+            player = new Player("", 36, 6, sword);
+            goblin = new Enemy("Goblin", 4, 24);
             Application.Run(new Form1());
 
-            
+
         }
     }
     public class Player
     {
 
-       
         private Weapon sword;
-
 
         public string PlayerName { get; set; }
         public int Health { get; set; }
         public int Strength { get; set; }
 
 
-        public Player(string playername, int health, int strength, Weapon s)
+        public Player(string playername, int health, int strength, Weapon sword)
         {
             this.PlayerName = playername;  //gets character name from form1 and makes it the username throughout the game. 
             //this.PlayerName = playername;
             this.Health = health;
             this.Strength = strength;
-            this.sword = s;
+            this.sword = sword;
         }
         public Player(string playername)
         {
@@ -58,7 +57,7 @@ namespace DungeonCrawler2
         }
         public int Attack()
         {
-            return sword.Attack(this.Strength);
+            return this.sword.Attack(this.Strength);
         }
 
 
@@ -66,8 +65,8 @@ namespace DungeonCrawler2
 
     public class Weapon
     {
-        public string Name { get; set; } = "Hel Fire";
-        public int AtkDmg { get; set; } = 4;
+        public string Name { get; set; }
+        public int AtkDmg { get; set; }
 
         public Weapon(string name, int attack)
         {
@@ -83,6 +82,29 @@ namespace DungeonCrawler2
             return result;
         }
     }
-    
+    public class Enemy
+    {
+        public string Name { get; set; }
+        public int AtkDmg { get; set; }
+        public int Health { get; set; }
+
+        public Enemy(string name, int atkdmg, int health)
+        {
+            this.Name = name;
+            this.AtkDmg = atkdmg;
+            this.Health = health;
+        }
+
+        private int Attack(int atkdmg)
+        {
+            return this.AtkDmg = atkdmg;
+        }
+
+        public int Attack()
+        {
+            return this.Attack(AtkDmg);
+        }
+
+    }
  
 }

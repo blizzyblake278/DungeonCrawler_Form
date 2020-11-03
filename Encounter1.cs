@@ -27,31 +27,30 @@ namespace DungeonCrawler2
             
         }
         
+        
         private void AtkSword_Click(object sender, EventArgs e)
         {
 
-           
-            int GoblinHealth = 36;
-            int GoblinAttack = 2;
 
-            
-            if (GoblinHealth != 0)
+            if (goblin.Health != 0)
             {
-                GoblinHealth -= player.Attack();
-                player.Health -= GoblinAttack;
-
-                //MessageBox.Show(String.Format("Goblin Health = {0}\n Player Health = {1}", GoblinHealth, player.Health));
+                player.Health -= goblin.Attack();
+                goblin.Health -= player.Attack();
                 ResultsLabel.Visible = true;
-
-                //below should display text and results from attack
-                ResultsLabel.Text = String.Format("{0} Attacks the goblin. The goblin is at {1} HP. \n {2} is at {3} HP",player.PlayerName, GoblinHealth,player.PlayerName, player.Health);
+                ResultsLabel.Text = String.Format("{0} health is at {1}\n {2} health is at {3}", player.PlayerName, player.Health, goblin.Name, goblin.Health);
             }
-            else
+            else if( goblin.Health == 0)
             {
-                MessageBox.Show("not done right");
-                //go to final scene/form
-                //Finalscene finalscene = new Finalscene();
+                Finalscene finalscene = new Finalscene();
+                Hide();
+                finalscene.Show();
             }
-        }
+            else if(player.Health == 0)
+            {
+                MessageBox.Show("YOU'RE DEAD!!!!!");
+            }
+               
+               
+            }
     }
 }

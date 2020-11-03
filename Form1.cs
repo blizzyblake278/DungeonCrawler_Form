@@ -36,7 +36,7 @@ namespace DungeonCrawler2
             //txtEmail.Text is string of email entered
 
             //MessageBox.Show(String.Format("Email: {0}\n UserName: {1}\nUser's Birthday: {2}", UserEmail, UserName, UserBday));
-            MessageBox.Show(player.PlayerName);
+           // MessageBox.Show(player.PlayerName);
            
             Intro intro = new Intro();
             Hide();

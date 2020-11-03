@@ -52,6 +52,12 @@
     <Compile Include="Encounter1.Designer.cs">
       <DependentUpon>Encounter1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Finalscene.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finalscene.Designer.cs">
+      <DependentUpon>Finalscene.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
