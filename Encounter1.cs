@@ -8,14 +8,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace DungeonCrawler2
 {
     public partial class Encounter1 : Form
     {
-        //Player player; //gets properties from player class
 
-        public Player player1;
+        
+        
+        private Player player { get; set; }
+        
 
         //Weapon weapon; //gets properties from weapon class
         public Encounter1()
@@ -26,23 +29,26 @@ namespace DungeonCrawler2
         
         private void AtkSword_Click(object sender, EventArgs e)
         {
-            
+
+           
             int GoblinHealth = 36;
             int GoblinAttack = 2;
+
+            
             if (GoblinHealth != 0)
             {
-               GoblinHealth -= player1.Attack();
-                player1.Health -= GoblinAttack;
+                GoblinHealth -= player.Attack();
+                player.Health -= GoblinAttack;
 
                 //MessageBox.Show(String.Format("Goblin Health = {0}\n Player Health = {1}", GoblinHealth, player1.Health));
                 //ResultsLabel.Visible = true;
-                
+
                 //below should display text and results from attack
-                //ResultsLabel.Text = Format.ToString("{0} Attacks the goblin. The goblin is at {1} HP. \n {2} is at {3} HP", player.PlayerName, GoblinHealth, player.PlayerName, player.Health);
+                ResultsLabel.Text = String.Format("{0} Attacks the goblin. The goblin is at {1} HP. \n {2} is at {3} HP", player.PlayerName, GoblinHealth, player.PlayerName, player.Health);
             }
             else
             {
-                MessageBox.Show("Error");
+               
                 //go to final scene/form
                 //Finalscene finalscene = new Finalscene();
             }

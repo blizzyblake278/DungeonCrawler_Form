@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -17,6 +18,8 @@ namespace DungeonCrawler2
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+
+
         }
     }
     public class Player
@@ -25,6 +28,8 @@ namespace DungeonCrawler2
 
        
         private Weapon sword;
+
+
         public string PlayerName { get; set; }
         public int Health { get; set; } = 36;
         public int Strength { get; set; } = 6;
@@ -33,7 +38,7 @@ namespace DungeonCrawler2
         public Player(string playername, int health, int strength, Weapon s)
         {
             this.Login.UserName = playername;  //gets character name from form1 and makes it the username throughout the game. 
-                                               // this.PlayerName = playername;
+            //this.PlayerName = playername;
             this.Health = health;
             this.Strength = strength;
             this.sword = s;

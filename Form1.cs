@@ -17,12 +17,17 @@ namespace DungeonCrawler2
     public partial class Form1 : Form
     {
 
+
+
+
+
+
         //sets user input from txtEmail.Text to UserEmail
+
         public string UserEmail { get; set; }
         public string UserName { get; set; }
-        public DateTime UserBday { get; set; }  
-     
-        
+        public DateTime UserBday { get; set; }
+
         public Form1()
         {
             InitializeComponent();
