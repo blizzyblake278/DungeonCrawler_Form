@@ -11,15 +11,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Console;
+using static DungeonCrawler2.Program;
 
 namespace DungeonCrawler2
 {
     public partial class Form1 : Form
     {
-
-
-
-
 
 
         //sets user input from txtEmail.Text to UserEmail
@@ -39,7 +36,8 @@ namespace DungeonCrawler2
             //txtEmail.Text is string of email entered
 
             //MessageBox.Show(String.Format("Email: {0}\n UserName: {1}\nUser's Birthday: {2}", UserEmail, UserName, UserBday));
-
+            MessageBox.Show(player.PlayerName);
+           
             Intro intro = new Intro();
             Hide();
             intro.Show();
@@ -57,7 +55,8 @@ namespace DungeonCrawler2
             //sets users input as UserName and returns it to 
             //auto prop of UserName
             //thhis username will also be used as player's name in game
-            UserName = this.txtName.Text;
+            player.PlayerName = this.txtName.Text;
+            //UserName = this.txtName.Text;
         }
 
         private void Dt_Picker_ValueChanged(object sender, EventArgs e)
