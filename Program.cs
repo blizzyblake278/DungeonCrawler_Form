@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Resources;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
@@ -24,9 +25,15 @@ namespace DungeonCrawler2
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+            Random rnd = new Random();
+
+            int atk = rnd.Next(8, 15);
+
             Weapon sword = new Weapon("Hel Fire", 4);
             player = new Player("", 36, 6, sword);
-            goblin = new Enemy("Goblin", 4, 24);
+            goblin = new Enemy("Goblin", atk, 24);
+            
+            
             Application.Run(new Form1());
 
 
@@ -84,6 +91,9 @@ namespace DungeonCrawler2
     }
     public class Enemy
     {
+
+        
+        
         public string Name { get; set; }
         public int AtkDmg { get; set; }
         public int Health { get; set; }
@@ -91,7 +101,7 @@ namespace DungeonCrawler2
         public Enemy(string name, int atkdmg, int health)
         {
             this.Name = name;
-            this.AtkDmg = atkdmg;
+           this.AtkDmg = atkdmg;
             this.Health = health;
         }
 
@@ -106,5 +116,7 @@ namespace DungeonCrawler2
         }
 
     }
+
+
  
 }

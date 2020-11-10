@@ -35,6 +35,10 @@
             this.dt_Picker = new System.Windows.Forms.DateTimePicker();
             this.lblDTpicker = new System.Windows.Forms.Label();
             this.btnContinue = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblEmail
@@ -78,7 +82,7 @@
             // dt_Picker
             // 
             this.dt_Picker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dt_Picker.Location = new System.Drawing.Point(205, 189);
+            this.dt_Picker.Location = new System.Drawing.Point(180, 252);
             this.dt_Picker.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dt_Picker.Name = "dt_Picker";
             this.dt_Picker.Size = new System.Drawing.Size(103, 20);
@@ -90,7 +94,7 @@
             // 
             this.lblDTpicker.AutoSize = true;
             this.lblDTpicker.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblDTpicker.Location = new System.Drawing.Point(112, 189);
+            this.lblDTpicker.Location = new System.Drawing.Point(115, 252);
             this.lblDTpicker.Name = "lblDTpicker";
             this.lblDTpicker.Size = new System.Drawing.Size(50, 15);
             this.lblDTpicker.TabIndex = 5;
@@ -100,7 +104,7 @@
             // 
             this.btnContinue.FlatAppearance.BorderSize = 3;
             this.btnContinue.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnContinue.Location = new System.Drawing.Point(269, 267);
+            this.btnContinue.Location = new System.Drawing.Point(267, 299);
             this.btnContinue.Name = "btnContinue";
             this.btnContinue.Size = new System.Drawing.Size(75, 23);
             this.btnContinue.TabIndex = 6;
@@ -108,11 +112,55 @@
             this.btnContinue.UseVisualStyleBackColor = true;
             this.btnContinue.Click += new System.EventHandler(this.Button1_Click);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(180, 187);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(79, 17);
+            this.checkBox1.TabIndex = 7;
+            this.checkBox1.Text = "WARRIOR";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(324, 187);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(70, 17);
+            this.checkBox2.TabIndex = 8;
+            this.checkBox2.Text = "WIZARD";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(454, 187);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(72, 17);
+            this.checkBox3.TabIndex = 9;
+            this.checkBox3.Text = "RANGER";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.Location = new System.Drawing.Point(112, 187);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 15);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "CLASS:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 363);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.checkBox3);
+            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.btnContinue);
             this.Controls.Add(this.lblDTpicker);
             this.Controls.Add(this.dt_Picker);
@@ -138,6 +186,10 @@
         private System.Windows.Forms.DateTimePicker dt_Picker;
         private System.Windows.Forms.Label lblDTpicker;
         private System.Windows.Forms.Button btnContinue;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.Label label1;
     }
 }
 

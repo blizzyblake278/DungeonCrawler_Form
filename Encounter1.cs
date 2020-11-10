@@ -20,7 +20,6 @@ namespace DungeonCrawler2
 
         
 
-        //Weapon weapon; //gets properties from weapon class
         public Encounter1()
         {
             InitializeComponent();
@@ -39,7 +38,7 @@ namespace DungeonCrawler2
                 ResultsLabel.Visible = true;
                 ResultsLabel.Text = String.Format("{0} health is at {1}\n {2} health is at {3}", player.PlayerName, player.Health, goblin.Name, goblin.Health);
             }
-            else if( goblin.Health == 0)
+            else if( goblin.Health <= 0)
             {
                 Finalscene finalscene = new Finalscene();
                 Hide();
@@ -47,7 +46,9 @@ namespace DungeonCrawler2
             }
             else if(player.Health == 0)
             {
-                MessageBox.Show("YOU'RE DEAD!!!!!");
+                YoureDead dead = new YoureDead();
+                Hide();
+                dead.Show();
             }
                
                
