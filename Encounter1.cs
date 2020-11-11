@@ -44,7 +44,7 @@ namespace DungeonCrawler2
                 Hide();
                 finalscene.Show();
             }
-            else if(player.Health == 0)
+            else if(player.Health <= 0)
             {
                 YoureDead dead = new YoureDead();
                 Hide();

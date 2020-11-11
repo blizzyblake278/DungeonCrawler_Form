@@ -27,11 +27,11 @@ namespace DungeonCrawler2
 
             Random rnd = new Random();
 
-            int atk = rnd.Next(8, 15);
-
+            int atkEnemy = rnd.Next(4,12);
+           
             Weapon sword = new Weapon("Hel Fire", 4);
             player = new Player("", 36, 6, sword);
-            goblin = new Enemy("Goblin", atk, 24);
+            goblin = new Enemy("Goblin", 36, atkEnemy);
             
             
             Application.Run(new Form1());
@@ -98,7 +98,7 @@ namespace DungeonCrawler2
         public int AtkDmg { get; set; }
         public int Health { get; set; }
 
-        public Enemy(string name, int atkdmg, int health)
+        public Enemy(string name, int health, int atkdmg)
         {
             this.Name = name;
            this.AtkDmg = atkdmg;
