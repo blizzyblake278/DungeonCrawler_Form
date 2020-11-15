@@ -27,11 +27,13 @@ namespace DungeonCrawler2
                 if(counter == 0)
                 {
                     TxtBox2.Visible = true;
+                    TxtBox1.Visible = false;
                     counter++;
                 }
                 else if(counter == 1)
                 {
                     TxtBox3.Visible = true;
+                    TxtBox2.Visible = false;
                     counter++;
                 }
                 else if (counter == 2)

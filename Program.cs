@@ -27,7 +27,7 @@ namespace DungeonCrawler2
 
             Random rnd = new Random();
 
-            int atkEnemy = rnd.Next(4,12);
+            int atkEnemy = rnd.Next(4,10);
            
             Weapon sword = new Weapon("Hel Fire", 4);
             player = new Player("", 36, 6, sword);

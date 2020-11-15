@@ -52,6 +52,7 @@
             this.AtkFist.TabIndex = 1;
             this.AtkFist.Text = "Attack w/ Fists";
             this.AtkFist.UseVisualStyleBackColor = true;
+            this.AtkFist.Click += new System.EventHandler(this.AtkFist_Click);
             // 
             // ResultsLabel
             // 

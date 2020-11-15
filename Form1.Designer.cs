@@ -159,8 +159,8 @@
             // 
             this.saveFileDialog1.FileName = "The Curse of Strahd_Save1";
             this.saveFileDialog1.Filter = "Excel|*.xlsx";
-            this.saveFileDialog1.InitialDirectory = "C:\\";
-            this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
+            this.saveFileDialog1.InitialDirectory = "%USERPROFILE%\\";
+            this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.SaveFileDialog1_FileOk);
             // 
             // btnRegister
             // 
@@ -172,7 +172,7 @@
             this.btnRegister.TabIndex = 11;
             this.btnRegister.Text = "&REGISTER";
             this.btnRegister.UseVisualStyleBackColor = true;
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            this.btnRegister.Click += new System.EventHandler(this.BtnRegister_Click);
             // 
             // Form1
             // 

@@ -38,41 +38,7 @@ namespace DungeonCrawler2
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            //var userInfo = new List<User> {
-            //    new User(email: user.UserEmail.ToString(), username: player.PlayerName.ToString(),birthday: user.UserBday.ToString())
-            //};
-
-            //ExcelMapper mapper = new ExcelMapper();
-
-            //var newFile = @"C:\DungeonCrawler.xlsx";
-            //mapper.Save(newFile, userInfo, "LoginInfo", true);
-
-
-            //var dateTimeStr = this.dt_Picker.Value;
-            //string birthday = dateTimeStr.ToString("MM/dd/yyyy");
-
-            //Microsoft.Office.Interop.Excel.Application xls = new Microsoft.Office.Interop.Excel.Application() ;
-
-            //Workbook wb = xls.Workbooks.Add(XlSheetType.xlWorksheet);
-            //Worksheet ws = (Worksheet)xls.ActiveSheet;
-
-
-            //xls.Visible = true;
-
-            //ws.Cells[1, 1] = "Email";
-            //ws.Cells[1, 2] = "Username";
-            //ws.Cells[1, 3] = "Birthday";
-
-            //ws.Cells[2, 1] = txtEmail.Text;
-            //ws.Cells[2, 2] = txtName.Text;
-            //ws.Cells[2, 3] = birthday;
-
-
-
-            //if (!WarriorBox.Checked && !WizardBox.Checked && !Rangerbox.Checked )
-            //{
-            //    MessageBox.Show("Must choose a class");
-            //}
+           
            
                 Intro intro = new Intro();
                 Hide();
@@ -114,12 +80,12 @@ namespace DungeonCrawler2
             System.Windows.Forms.Application.Exit();
         }
 
-        private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
+        private void SaveFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
             
         }
 
-        private void btnRegister_Click(object sender, EventArgs e)
+        private void BtnRegister_Click(object sender, EventArgs e)
         {
 
             while (!btnContinue.Visible)
@@ -131,31 +97,42 @@ namespace DungeonCrawler2
                 }
                 else
                 {
-                    //if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-                   // {
+                    
                         var dateTimeStr = this.dt_Picker.Value;
                         string birthday = dateTimeStr.ToString("MM/dd/yyyy");
 
-                        Microsoft.Office.Interop.Excel.Application xls = new Microsoft.Office.Interop.Excel.Application();
+                        Microsoft.Office.Interop.Excel.Application xls = new Microsoft.Office.Interop.Excel.Application();   //insatance of xls to be xls file
 
                         Workbook wb = xls.Workbooks.Add(XlSheetType.xlWorksheet);
                         Worksheet ws = (Worksheet)xls.ActiveSheet;
 
 
-                        xls.Visible = false;
-                        ws.Cells[1, 1] = "Email";
+                    
+
+                        xls.Visible = false;  //shows excel sheet to test data has been input correctly
+                        
+                    //create headers on xls sheet
+                         ws.Cells[1, 1] = "Email"; 
                         ws.Cells[1, 2] = "Username";
                         ws.Cells[1, 3] = "Birthday";
-
+                    
+                    //puts data in row then column
                         ws.Cells[2, 1] = txtEmail.Text;
                         ws.Cells[2, 2] = txtName.Text;
                         ws.Cells[2, 3] = birthday;
+                    
+                    if(saveFileDialog1.ShowDialog() == DialogResult.OK)
+                    {
+                        wb.SaveAs(saveFileDialog1.FileName);  //creates save as dialog box to save file as filename that was stated in the properties of savedialog1
+                    }
+                   
 
-                        xls.Visible = true;
+                        // used the below to check the excel sheet to ensure it showed correctly.                           
+                        //xls.Visible = true;
                     
                         btnRegister.Visible = false;
                         btnContinue.Visible = true;
-                    //}
+                    
                 }
             }
             

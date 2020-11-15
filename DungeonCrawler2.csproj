@@ -130,6 +130,9 @@
     <EmbeddedResource Include="Encounter1.resx">
       <DependentUpon>Encounter1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Finalscene.resx">
+      <DependentUpon>Finalscene.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -144,6 +147,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="YoureDead.resx">
       <DependentUpon>YoureDead.cs</DependentUpon>
@@ -190,6 +194,9 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\strahdcastle.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

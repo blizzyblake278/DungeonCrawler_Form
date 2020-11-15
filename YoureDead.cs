@@ -19,22 +19,20 @@ namespace DungeonCrawler2
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
-            ////create instance of savefile
-            //SaveFileDialog saveFile = new SaveFileDialog();
-            ////save file type as
-            //saveFile.Filter = "Excel File | *.xls";
-            //saveFile.Title = " Save an Excel File";
-            //saveFile.ShowDialog();
-            //if(saveFile.FileName != "")
-            //{
-            //    saveExcelFile(saveFile.FileName);
-            //}
+            
             Application.Exit();
         }
 
-        private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
+        private void SaveFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
 
+        }
+
+        private void ContinueButton_Click(object sender, EventArgs e)
+        {
+            Encounter1 encounter = new Encounter1();
+            Hide();
+            encounter.Show();
         }
     }
 }

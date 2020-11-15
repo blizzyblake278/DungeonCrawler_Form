@@ -27,31 +27,65 @@ namespace DungeonCrawler2
         }
         
         
+
+        //only 1 issue here. the scene switches only when the player's health drops below 0. 
         private void AtkSword_Click(object sender, EventArgs e)
         {
 
+           
 
             if (goblin.Health != 0)
             {
-                player.Health -= goblin.Attack();
                 goblin.Health -= player.Attack();
+                player.Health -= goblin.Attack();
                 ResultsLabel.Visible = true;
                 ResultsLabel.Text = String.Format("{0} health is at {1}\n {2} health is at {3}", player.PlayerName, player.Health, goblin.Name, goblin.Health);
+                if(goblin.Health <= 0)
+                {
+                    Finalscene finalscene = new Finalscene();
+                    this.Close();
+                    finalscene.Show();
+                }
             }
-            else if( goblin.Health <= 0)
-            {
-                Finalscene finalscene = new Finalscene();
-                Hide();
-                finalscene.Show();
-            }
-            else if(player.Health <= 0)
+            //else if (goblin.Health <= 0)
+            //{
+            //    Finalscene finalscene = new Finalscene();
+            //    this.Close();
+            //    finalscene.Show();
+            //}
+            else
             {
                 YoureDead dead = new YoureDead();
                 Hide();
                 dead.Show();
             }
-               
-               
+
+
+
+        }
+
+        private void AtkFist_Click(object sender, EventArgs e)
+        {
+            if (goblin.Health != 0)
+            {
+                goblin.Health -= player.Attack();
+                player.Health -= goblin.Attack();
+                ResultsLabel.Visible = true;
+                ResultsLabel.Text = String.Format("{0} health is at {1}\n {2} health is at {3}", player.PlayerName, player.Health, goblin.Name, goblin.Health);
+                if (goblin.Health <= 0)
+                {
+                    Finalscene finalscene = new Finalscene();
+                    this.Close();
+                    finalscene.Show();
+                }
             }
+           
+            else
+            {
+                YoureDead dead = new YoureDead();
+                Hide();
+                dead.Show();
+            }
+        }
     }
 }

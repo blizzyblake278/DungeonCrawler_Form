@@ -37,33 +37,36 @@
             // 
             // TxtBox1
             // 
+            this.TxtBox1.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtBox1.Location = new System.Drawing.Point(12, 12);
             this.TxtBox1.Name = "TxtBox1";
-            this.TxtBox1.Size = new System.Drawing.Size(776, 109);
+            this.TxtBox1.Size = new System.Drawing.Size(776, 145);
             this.TxtBox1.TabIndex = 0;
             this.TxtBox1.Text = resources.GetString("TxtBox1.Text");
             // 
             // TxtBox2
             // 
-            this.TxtBox2.Location = new System.Drawing.Point(12, 138);
+            this.TxtBox2.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtBox2.Location = new System.Drawing.Point(12, 153);
             this.TxtBox2.Name = "TxtBox2";
-            this.TxtBox2.Size = new System.Drawing.Size(776, 109);
+            this.TxtBox2.Size = new System.Drawing.Size(776, 124);
             this.TxtBox2.TabIndex = 1;
             this.TxtBox2.Text = resources.GetString("TxtBox2.Text");
             this.TxtBox2.Visible = false;
             // 
             // TxtBox3
             // 
-            this.TxtBox3.Location = new System.Drawing.Point(12, 268);
+            this.TxtBox3.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtBox3.Location = new System.Drawing.Point(12, 261);
             this.TxtBox3.Name = "TxtBox3";
-            this.TxtBox3.Size = new System.Drawing.Size(776, 109);
+            this.TxtBox3.Size = new System.Drawing.Size(785, 131);
             this.TxtBox3.TabIndex = 2;
-            this.TxtBox3.Text = "*****";
+            this.TxtBox3.Text = resources.GetString("TxtBox3.Text");
             this.TxtBox3.Visible = false;
             // 
             // ContinueButton
             // 
-            this.ContinueButton.Location = new System.Drawing.Point(358, 398);
+            this.ContinueButton.Location = new System.Drawing.Point(355, 398);
             this.ContinueButton.Name = "ContinueButton";
             this.ContinueButton.Size = new System.Drawing.Size(84, 40);
             this.ContinueButton.TabIndex = 3;
