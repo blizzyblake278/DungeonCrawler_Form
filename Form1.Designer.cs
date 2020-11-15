@@ -35,10 +35,12 @@
             this.dt_Picker = new System.Windows.Forms.DateTimePicker();
             this.lblDTpicker = new System.Windows.Forms.Label();
             this.btnContinue = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.WarriorBox = new System.Windows.Forms.CheckBox();
+            this.WizardBox = new System.Windows.Forms.CheckBox();
+            this.Rangerbox = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.btnRegister = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblEmail
@@ -108,39 +110,40 @@
             this.btnContinue.Name = "btnContinue";
             this.btnContinue.Size = new System.Drawing.Size(75, 23);
             this.btnContinue.TabIndex = 6;
-            this.btnContinue.Text = "CONTINUE";
+            this.btnContinue.Text = "&CONTINUE";
             this.btnContinue.UseVisualStyleBackColor = true;
+            this.btnContinue.Visible = false;
             this.btnContinue.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // checkBox1
+            // WarriorBox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(180, 187);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(79, 17);
-            this.checkBox1.TabIndex = 7;
-            this.checkBox1.Text = "WARRIOR";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.WarriorBox.AutoSize = true;
+            this.WarriorBox.Location = new System.Drawing.Point(180, 187);
+            this.WarriorBox.Name = "WarriorBox";
+            this.WarriorBox.Size = new System.Drawing.Size(79, 17);
+            this.WarriorBox.TabIndex = 7;
+            this.WarriorBox.Text = "WARRIOR";
+            this.WarriorBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // WizardBox
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(324, 187);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(70, 17);
-            this.checkBox2.TabIndex = 8;
-            this.checkBox2.Text = "WIZARD";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.WizardBox.AutoSize = true;
+            this.WizardBox.Location = new System.Drawing.Point(324, 187);
+            this.WizardBox.Name = "WizardBox";
+            this.WizardBox.Size = new System.Drawing.Size(70, 17);
+            this.WizardBox.TabIndex = 8;
+            this.WizardBox.Text = "WIZARD";
+            this.WizardBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // Rangerbox
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(454, 187);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(72, 17);
-            this.checkBox3.TabIndex = 9;
-            this.checkBox3.Text = "RANGER";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.Rangerbox.AutoSize = true;
+            this.Rangerbox.Location = new System.Drawing.Point(454, 187);
+            this.Rangerbox.Name = "Rangerbox";
+            this.Rangerbox.Size = new System.Drawing.Size(72, 17);
+            this.Rangerbox.TabIndex = 9;
+            this.Rangerbox.Text = "RANGER";
+            this.Rangerbox.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -152,15 +155,35 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "CLASS:";
             // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.FileName = "The Curse of Strahd_Save1";
+            this.saveFileDialog1.Filter = "Excel|*.xlsx";
+            this.saveFileDialog1.InitialDirectory = "C:\\";
+            this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
+            // 
+            // btnRegister
+            // 
+            this.btnRegister.FlatAppearance.BorderSize = 3;
+            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRegister.Location = new System.Drawing.Point(358, 299);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(75, 23);
+            this.btnRegister.TabIndex = 11;
+            this.btnRegister.Text = "&REGISTER";
+            this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 363);
+            this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.Rangerbox);
+            this.Controls.Add(this.WizardBox);
+            this.Controls.Add(this.WarriorBox);
             this.Controls.Add(this.btnContinue);
             this.Controls.Add(this.lblDTpicker);
             this.Controls.Add(this.dt_Picker);
@@ -186,10 +209,12 @@
         private System.Windows.Forms.DateTimePicker dt_Picker;
         private System.Windows.Forms.Label lblDTpicker;
         private System.Windows.Forms.Button btnContinue;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox WarriorBox;
+        private System.Windows.Forms.CheckBox WizardBox;
+        private System.Windows.Forms.CheckBox Rangerbox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.Button btnRegister;
     }
 }
 

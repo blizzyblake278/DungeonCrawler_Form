@@ -33,7 +33,7 @@ namespace DungeonCrawler2
             player = new Player("", 36, 6, sword);
             goblin = new Enemy("Goblin", 36, atkEnemy);
             
-            
+
             Application.Run(new Form1());
 
 
