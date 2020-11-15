@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -25,12 +26,14 @@ namespace DungeonCrawler2
             InitializeComponent();
             
         }
-        
-        
+       
+
 
         //only 1 issue here. the scene switches only when the player's health drops below 0. 
         private void AtkSword_Click(object sender, EventArgs e)
         {
+            SoundPlayer soundplayer = new SoundPlayer(@"C:\Users\magic\source\repos\DungeonCrawler2\Resources\sword_slash_wav.wav");
+            soundplayer.Play();
 
            
 
@@ -63,9 +66,15 @@ namespace DungeonCrawler2
 
 
         }
-
+       
         private void AtkFist_Click(object sender, EventArgs e)
         {
+
+
+            SoundPlayer soundplayer = new SoundPlayer(@"C:\Users\magic\source\repos\DungeonCrawler2\Resources\punch.wav");
+            soundplayer.Play();
+
+
             if (goblin.Health != 0)
             {
                 goblin.Health -= player.Attack();
