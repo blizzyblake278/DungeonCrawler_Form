@@ -29,7 +29,7 @@ namespace DungeonCrawler2
        
 
 
-        //only 1 issue here. the scene switches only when the player's health drops below 0. 
+        //figure out how to add wav files to folder and access them in teh directory so it's not local. 
         private void AtkSword_Click(object sender, EventArgs e)
         {
             SoundPlayer soundplayer = new SoundPlayer(@"C:\Users\magic\source\repos\DungeonCrawler2\Resources\sword_slash_wav.wav");
@@ -69,7 +69,7 @@ namespace DungeonCrawler2
        
         private void AtkFist_Click(object sender, EventArgs e)
         {
-
+            
 
             SoundPlayer soundplayer = new SoundPlayer(@"C:\Users\magic\source\repos\DungeonCrawler2\Resources\punch.wav");
             soundplayer.Play();
