@@ -53,7 +53,7 @@ namespace DungeonCrawler2
                 if(goblin.Health <= 0)
                 {
                     Finalscene finalscene = new Finalscene();
-                    this.Close();
+                    Hide();
                     finalscene.Show();
                 }
             }
@@ -95,7 +95,7 @@ namespace DungeonCrawler2
                 if (goblin.Health <= 0)
                 {
                     Finalscene finalscene = new Finalscene();
-                    this.Close();
+                    Hide();
                     finalscene.Show();
                 }
             }
