@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
+using DungeonCrawler2.Properties;
 using static DungeonCrawler2.Program;
 
 namespace DungeonCrawler2
@@ -32,10 +33,16 @@ namespace DungeonCrawler2
         //figure out how to add wav files to folder and access them in teh directory so it's not local. 
         private void AtkSword_Click(object sender, EventArgs e)
         {
-            SoundPlayer soundplayer = new SoundPlayer(@"C:\Users\magic\source\repos\DungeonCrawler2\Resources\sword_slash_wav.wav");
+            //SoundPlayer soundplayer = new SoundPlayer(@"C:\Users\magic\source\repos\DungeonCrawler2\Resources\sword_slash_wav.wav");
+            //soundplayer.Play();
+
+
+            // added sowrdslash to resources.resx file to access within compiled folder. || also added using <namespace>.Properties at the top to access this within the compiled file
+            SoundPlayer soundplayer = new SoundPlayer(Resources.SwordSlash_wav);
             soundplayer.Play();
 
-           
+
+
 
             if (goblin.Health != 0)
             {
@@ -71,7 +78,11 @@ namespace DungeonCrawler2
         {
             
 
-            SoundPlayer soundplayer = new SoundPlayer(@"C:\Users\magic\source\repos\DungeonCrawler2\Resources\punch.wav");
+            //SoundPlayer soundplayer = new SoundPlayer(@"C:\Users\magic\source\repos\DungeonCrawler2\Resources\punch.wav");
+            //soundplayer.Play();
+
+            // added punch to resources.resx file. also added using <namespace>.Properties at the top to access this within the compiled file
+            SoundPlayer soundplayer = new SoundPlayer(Resources.punch);
             soundplayer.Play();
 
 
