@@ -40,7 +40,6 @@ namespace DungeonCrawler2
                 {
                     Encounter1 encounter = new Encounter1();
                     encounter.Show();
-                    this.Close();
                     Hide();
 
                 }

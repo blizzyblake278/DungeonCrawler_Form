@@ -41,12 +41,11 @@ namespace DungeonCrawler2
            
            
                 Intro intro = new Intro();
-                this.Close();
-                
                 intro.Show();
-            
+            Hide();
 
-           
+
+
         }
 
         private void TxtEmail_TextChanged(object sender, EventArgs e)
