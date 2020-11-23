@@ -6,6 +6,8 @@ using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
+using DungeonCrawler2.Properties;
 
 namespace DungeonCrawler2
 {
@@ -32,10 +34,21 @@ namespace DungeonCrawler2
             Weapon sword = new Weapon("Hel Fire", 4);
             player = new Player("", 36, 6, sword);
             goblin = new Enemy("Goblin", 36, atkEnemy);
-            
+
+            //set background music here for dark_castle. 
+            //under properties set Copy > Output dir. & Copy Always
+            // also build action to content. this will make VS copy music to output directory always.
+            SoundPlayer soundplayer = new SoundPlayer(Resources.dark_castle);
+
+            soundplayer.PlayLooping();
+
 
             Application.Run(new Form1());
 
+
+
+
+            
 
         }
     }

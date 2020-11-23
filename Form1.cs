@@ -14,6 +14,7 @@ using System.Windows.Forms;
 using Ganss.Excel;
 using static System.Console;
 using static DungeonCrawler2.Program;
+using  DungeonCrawler2.Properties;
 
 namespace DungeonCrawler2
 {
@@ -27,13 +28,13 @@ namespace DungeonCrawler2
             public string UserName { get; set; }
             public string UserBday { get; set; }
 
+
+        System.Media.SoundPlayer soundplayer = new System.Media.SoundPlayer();
       
 
         public Form1()
         {
-
             InitializeComponent();
-
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -140,6 +141,12 @@ namespace DungeonCrawler2
             
             
 
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
 
         }
     }
