@@ -43,3 +43,4 @@ C:\Users\magic\source\repos\DungeonCrawler2\bin\Debug\System.ValueTuple.xml
 C:\Users\magic\source\repos\DungeonCrawler2\obj\Debug\DungeonCrawler2.csproj.CopyComplete
 C:\Users\magic\source\repos\DungeonCrawler2\obj\Debug\DungeonCrawler2.csproj.ResolveComReference.cache
 C:\Users\magic\source\repos\DungeonCrawler2\obj\Debug\DungeonCrawler2.Finalscene.resources
+C:\Users\magic\source\repos\DungeonCrawler2\obj\Debug\DungeonCrawler2.g.resources

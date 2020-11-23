@@ -198,5 +198,8 @@
   <ItemGroup>
     <None Include="Resources\strahdcastle.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\dark_castle.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -63,6 +63,15 @@ namespace DungeonCrawler2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        public static System.IO.UnmanagedMemoryStream dark_castle {
+            get {
+                return ResourceManager.GetStream("dark_castle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         public static System.IO.UnmanagedMemoryStream punch {
             get {
                 return ResourceManager.GetStream("punch", resourceCulture);
