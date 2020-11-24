@@ -72,9 +72,36 @@ namespace DungeonCrawler2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        public static System.IO.UnmanagedMemoryStream Loopable_A_2020_09_15___Brutality___David_Fesliyan {
+            get {
+                return ResourceManager.GetStream("Loopable_A_2020_09_15___Brutality___David_Fesliyan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Loopable_B_2020_09_15___Brutality___David_Fesliyan {
+            get {
+                return ResourceManager.GetStream("Loopable_B_2020_09_15___Brutality___David_Fesliyan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         public static System.IO.UnmanagedMemoryStream punch {
             get {
                 return ResourceManager.GetStream("punch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Short_Stinger_2020_09_15___Brutality___David_Fesliyan {
+            get {
+                return ResourceManager.GetStream("Short_Stinger_2020_09_15___Brutality___David_Fesliyan", resourceCulture);
             }
         }
         

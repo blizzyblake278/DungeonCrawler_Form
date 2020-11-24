@@ -20,8 +20,7 @@ namespace DungeonCrawler2
 
 
 
-        
-
+        // Add music here for fight. 
         public Encounter1()
         {
             InitializeComponent();

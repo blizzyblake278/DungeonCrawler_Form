@@ -201,5 +201,14 @@
   <ItemGroup>
     <Resource Include="Resources\dark_castle.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loopable-A-2020-09-15_-_Brutality_-_David_Fesliyan.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loopable-B-2020-09-15_-_Brutality_-_David_Fesliyan.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Short-Stinger-2020-09-15_-_Brutality_-_David_Fesliyan.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

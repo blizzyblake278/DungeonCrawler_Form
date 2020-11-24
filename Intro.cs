@@ -8,12 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Console;
+using System.Media;
+using DungeonCrawler2.Properties;
 
 namespace DungeonCrawler2
 {
+
     public partial class Intro : Form
     {
-        
+
+
+        SoundPlayer LoopA = new SoundPlayer(Resources.Loopable_A_2020_09_15___Brutality___David_Fesliyan);
+        SoundPlayer LoopB = new SoundPlayer(Resources.Loopable_B_2020_09_15___Brutality___David_Fesliyan);
+
+
         public Intro()
         {
             InitializeComponent();
@@ -28,12 +36,14 @@ namespace DungeonCrawler2
                 {
                     TxtBox2.Visible = true;
                     TxtBox1.Visible = false;
+                    LoopA.Play();
                     counter++;
                 }
                 else if(counter == 1)
                 {
                     TxtBox3.Visible = true;
                     TxtBox2.Visible = false;
+                    LoopB.Play();
                     counter++;
                 }
                 else if (counter == 2)
@@ -51,5 +61,7 @@ namespace DungeonCrawler2
         {
             Application.Exit();
         }
+
+        
     }
 }
