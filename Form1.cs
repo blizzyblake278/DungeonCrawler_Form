@@ -43,7 +43,7 @@ namespace DungeonCrawler2
            
                 Intro intro = new Intro();
                 intro.Show();
-            Hide();
+                Hide();
 
 
 
@@ -125,7 +125,7 @@ namespace DungeonCrawler2
                     if(saveFileDialog1.ShowDialog() == DialogResult.OK)
                     {
                         wb.SaveAs(saveFileDialog1.FileName);  //creates save as dialog box to save file as filename that was stated in the properties of savedialog1
-                       
+                        wb.Close();
                     }
                    
 
